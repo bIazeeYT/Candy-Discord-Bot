@@ -1,13 +1,9 @@
 from discord.ext import commands #pip install discord.py==2.0.1
 from discord.ext.commands import CommandNotFound
-from dotenv import load_dotenv #pip install python-dotenv==0.21.0
 import discord
 import asyncio
 import os
 
-load_dotenv()
-
-token=os.getenv('TOKEN')
 prefix = "$"  # your prefix here
 intents = discord.Intents.all()
 
@@ -43,4 +39,4 @@ async def on_command_error(ctx, error):
     raise error
 
 
-bot.run(token)
+bot.run('your Token here')
